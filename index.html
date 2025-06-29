@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mente Jovem - Transformando Vidas</title>
+    <style>
+        /* Reset e Estilo Geral */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            background-color: #F5F6F5; /* Cinza Suave */
+            color: #333333;
+            line-height: 1.6;
+        }
+
+        /* Navegação */
+        nav {
+            background-color: #FFFFFF; /* Branco */
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #333333;
+        }
+
+        .logo span.icon {
+            color: #A3D9D3; /* Verde-Água */
+            margin-right: 0.5rem;
+            font-size: 2rem;
+        }
+
+        .logo span.mente {
+            color: #1A73E8; /* Azul Claro para contraste */
+        }
+
+        .logo span.jovem {
+            color: #A3D9D3; /* Verde-Água */
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #A3D9D3; /* Verde-Água */
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #1A73E8; /* Azul Claro */
+        }
+
+        /* Seções */
+        section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            margin-top: 80px; /* Ajuste para nav fixa */
+        }
+
+        h1, h2 {
+            color: #333333;
+            margin-bottom: 1.5rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Seção Hero */
+        #hero {
+            background-color: #E6F0FA; /* Azul Claro */
+            text-align: center;
+            padding: 6rem 2rem;
+        }
+
+        #hero h1 {
+            font-size: 3rem;
+        }
+
+        #hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Seções Gerais */
+        .section-content {
+            background-color: #FFFFFF; /* Branco */
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+        }
+
+        ul {
+            list-style: disc;
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Botão WhatsApp */
+        .whatsapp-btn {
+            display: inline-block;
+            background-color: #A3D9D3; /* Verde-Água */
+            color: #FFFFFF;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            margin-top: 1rem;
+            text-align: center;
+        }
+
+        .whatsapp-btn:hover {
+            background-color: #1A73E8; /* Azul Claro */
+        }
+
+        /* Footer */
+        footer {
+            background-color: #E6F0FA; /* Azul Claro */
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                gap: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            #hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navegação com Logo -->
+    <nav>
+        <div class="logo">
+            <span class="icon">🧠💙</span>
+            <span class="mente Jovem">Mente</span>
+            <span class="jovem">Jovem</span>
+        </div>
+        <ul>
+            <li><a href="#hero">Início</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#funcionamento">Como Funciona</a></li>
+            <li><a href="#beneficios">Benefícios</a></li>
+            <li><a href="#caso">Caso Real</a></li>
+            <li><a href="#implementacao">Implementação</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+
+    <!-- Seção Hero -->
+    <section id="hero">
+        <h1>Transformando Vidas: Bem-Estar do Aluno por Meio da Terapia Virtual</h1>
+        <p>O <strong>Mente Jovem</strong> promove a saúde mental e o desenvolvimento socioemocional de jovens, oferecendo terapia virtual acessível e programas para uma vida equilibrada e produtiva.</p>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section id="sobre">
+        <div class="section-content">
+            <h2>Sobre o Projeto Mente Jovem</h2>
+            <p>O <strong>Mente Jovem</strong> é uma iniciativa pioneira dedicada a promover o <strong>bem-estar do aluno</strong> através da <strong>terapia virtual</strong> e do desenvolvimento socioemocional de jovens brasileiros. Nosso objetivo principal é garantir que jovens de 14 a 24 anos tenham acesso a suporte psicológico acessível e de qualidade, utilizando plataformas digitais para oferecer apoio emocional, fortalecer a saúde mental e promover habilidades para uma vida equilibrada e produtiva.</p>
+            <p>Voltado para comunidades escolares, centros juvenis e populações em vulnerabilidade, o projeto utiliza a <strong>terapia virtual</strong> como ferramenta central para alcançar jovens em qualquer região, assegurando seu bem-estar e desenvolvimento integral.</p>
+        </div>
+    </section>
+
+    <!-- Seção Por que -->
+    <section id="porque">
+        <div class="section-content">
+            <h2>Por que o Mente Jovem?</h2>
+            <p>Muitos jovens enfrentam desafios como ansiedade, estresse e falta de suporte emocional, frequentemente sem acesso a recursos adequados. O <strong>Mente Jovem</strong> tem como missão transformar essa realidade, com foco em:</p>
+            <ul>
+                <li><strong>Bem-Estar do Aluno</strong>: Priorizamos a saúde mental e emocional dos jovens, promovendo resiliência e equilíbrio psicológico.</li>
+                <li><strong>Terapia Virtual</strong>: Oferecemos sessões de terapia online com profissionais qualificados, garantindo acessibilidade e flexibilidade.</li>
+                <li><strong>Educação Socioemocional</strong>: Desenvolvemos habilidades como autoconhecimento, empatia e resolução de conflitos para apoiar o crescimento pessoal.</li>
+                <li><strong>Impacto Escolar e Comunitário</strong>: Criamos ambientes mais acolhedores nas escolas e fortalecemos redes de apoio nas comunidades.</li>
+            </ul>
+            <p>O projeto está alinhado com as diretrizes de políticas públicas para juventude, educação e saúde, contribuindo para os Objetivos de Desenvolvimento Sustentável (ODS) da ONU, especialmente nas áreas de saúde e bem-estar (ODS 3) e educação de qualidade (ODS 4).</p>
+        </div>
+    </section>
+
+    <!-- Seção Como Funciona -->
+    <section id="funcionamento">
+        <div class="section-content">
+            <h2>Como Funciona?</h2>
+            <p>O <strong>Mente Jovem</strong> estrutura-se em dois pilares centrais, com ênfase na terapia virtual e no bem-estar do aluno:</p>
+            <h3>1. Terapia Virtual para Bem-Estar</h3>
+            <ul>
+                <li>Sessões individuais e em grupo conduzidas por psicólogos via plataformas digitais seguras.</li>
+                <li>Oficinas online de mindfulness, gestão de estresse e prevenção ao suicídio.</li>
+                <li>Campanhas virtuais para conscientizar e reduzir o estigma em torno da saúde mental.</li>
+            </ul>
+            <h3>2. Educação Socioemocional</h3>
+            <ul>
+                <li>Cursos digitais interativos focados em habilidades emocionais, como regulação emocional e tomada de decisão.</li>
+                <li>Atividades práticas que promovem liderança, trabalho em equipe e autoconfiança.</li>
+                <li>Integração com escolas para reforçar o bem-estar dos alunos no ambiente educacional.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Seção Benefícios -->
+    <section id="beneficios">
+        <div class="section-content">
+            <h2>Benefícios para a Sociedade</h2>
+            <ul>
+                <li><strong>Melhoria do bem-estar dos alunos</strong>, reduzindo ansiedade, depressão e outros desafios emocionais.</li>
+                <li><strong>Acessibilidade universal</strong> por meio da terapia virtual, alcançando jovens em áreas remotas ou urbanas.</li>
+                <li><strong>Redução da evasão escolar</strong> através de suporte emocional que mantém os alunos engajados.</li>
+                <li><strong>Fortalecimento da cidadania</strong>, com jovens mais confiantes e preparados para contribuir com suas comunidades.</li>
+                <li><strong>Criação de ambientes escolares mais saudáveis</strong>, com foco no bem-estar psicológico.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Seção Caso Real -->
+    <section id="caso">
+        <div class="section-content">
+            <h2>Caso Real: O Desafio de Ana</h2>
+            <p>Ana, uma aluna de 16 anos de uma escola pública, sofria de crises de ansiedade que afetavam seu desempenho e interação social. Apesar de buscar ajuda, ela foi negligenciada pelos gestores escolares, que não tinham recursos ou preparo para apoiá-la. Sem suporte, Ana enfrentava risco de evasão escolar e agravamento de sua saúde mental.</p>
+            <p>Com o <strong>Mente Jovem</strong>, Ana teria acesso a:</p>
+            <ul>
+                <li><strong>Terapia virtual</strong> com psicólogos qualificados para gerenciar sua ansiedade.</li>
+                <li>Oficinas online de educação socioemocional para desenvolver resiliência e autoconfiança.</li>
+                <li>Treinamento para educadores, capacitando a escola a criar um ambiente mais acolhedor.</li>
+            </ul>
+            <p>Por meio da <strong>terapia virtual</strong> e do foco no <strong>bem-estar do aluno</strong>, o <strong>Mente Jovem</strong> pode transformar a trajetória de jovens como Ana, ajudando-os a superar desafios e prosperar.</p>
+        </div>
+    </section>
+
+    <!-- Seção Implementação -->
+    <section id="implementacao">
+        <div class="section-content">
+            <h2>Implementação</h2>
+            <p>O <strong>Mente Jovem</strong> pode ser implementado em parceria com secretarias de educação, saúde e assistência social, adaptando-se às necessidades regionais. O projeto prevê:</p>
+            <ul>
+                <li><strong>Fase Piloto</strong>: Implementação em escolas selecionadas, com terapia virtual e avaliação de impacto em 6 meses.</li>
+                <li><strong>Escalabilidade</strong>: Expansão para outras regiões, utilizando plataformas digitais para alcançar mais jovens.</li>
+                <li><strong>Formação de Multiplicadores</strong>: Treinamento de educadores e profissionais para integrar a terapia virtual e promover o bem-estar nas escolas.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contato">
+        <div class="section-content">
+            <h2>Fale Conosco</h2>
+            <p>O <strong>Mente Jovem</strong> é uma oportunidade de transformar o futuro da juventude brasileira, garantindo o <strong>bem-estar do aluno</strong> por meio da <strong>terapia virtual</strong>. Convidamos o governo a ser nosso parceiro estratégico para levar este projeto a milhares de jovens, construindo uma sociedade mais saudável e preparada.</p>
+            <a href="https://wa.me/5511999128663" class="whatsapp-btn">Fale pelo WhatsApp</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Faça parte da mudança. Juntos, podemos priorizar o bem-estar dos jovens!</p>
+    </footer>
+
+    <!-- Importação da Fonte Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</body>
+</html>
