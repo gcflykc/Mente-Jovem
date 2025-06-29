@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mente Jovem - Transformando Vidas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
     <style>
         /* Reset e Estilo Geral */
         * {
@@ -17,16 +18,23 @@
             background-color: #F5F6F5; /* Cinza Suave */
             color: #333333;
             line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Animação Fade-In */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         /* Navegação */
         nav {
             background-color: #FFFFFF; /* Branco */
-            padding: 1rem 2rem;
+            padding: 1.5rem 2rem;
             position: fixed;
             width: 100%;
             top: 0;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -34,24 +42,16 @@
         }
 
         .logo {
-            display: flex;
-            align-items: center;
-            font-size: 1.8rem;
-            font-weight: bold;
+            font-size: 2rem;
+            font-weight: 700;
             color: #333333;
         }
 
-        .logo span.icon {
-            color: #A3D9D3; /* Verde-Água */
-            margin-right: 0.5rem;
-            font-size: 2rem;
+        .logo .mente {
+            color: #1A73E8; /* Azul Claro */
         }
 
-        .logo span.mente {
-            color: #1A73E8; /* Azul Claro para contraste */
-        }
-
-        .logo span.jovem {
+        .logo .jovem {
             color: #A3D9D3; /* Verde-Água */
         }
 
@@ -65,19 +65,22 @@
             text-decoration: none;
             color: #A3D9D3; /* Verde-Água */
             font-weight: 500;
-            transition: color 0.3s;
+            font-size: 1.1rem;
+            transition: color 0.3s, transform 0.3s;
         }
 
         nav ul li a:hover {
             color: #1A73E8; /* Azul Claro */
+            transform: scale(1.1);
         }
 
         /* Seções */
         section {
-            padding: 5rem 2rem;
+            padding: 6rem 2rem;
             max-width: 1200px;
             margin: 0 auto;
             margin-top: 80px; /* Ajuste para nav fixa */
+            animation: fadeIn 1s ease-out;
         }
 
         h1, h2 {
@@ -86,49 +89,78 @@
         }
 
         h1 {
-            font-size: 2.5rem;
+            font-size: 3rem;
             text-align: center;
         }
 
         h2 {
+            font-size: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .icon {
             font-size: 1.8rem;
         }
 
         p {
-            font-size: 1rem;
+            font-size: 1.1rem;
             margin-bottom: 1rem;
         }
 
         /* Seção Hero */
         #hero {
-            background-color: #E6F0FA; /* Azul Claro */
+            background: linear-gradient(135deg, #E6F0FA 0%, #A3D9D3 100%); /* Gradiente Azul Claro para Verde-Água */
             text-align: center;
-            padding: 6rem 2rem;
+            padding: 7rem 2rem;
+            border-radius: 12px;
         }
 
         #hero h1 {
-            font-size: 3rem;
+            font-size: 3.5rem;
+            font-weight: 700;
         }
 
         #hero p {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             max-width: 800px;
             margin: 0 auto;
+            font-style: italic;
         }
 
         /* Seções Gerais */
         .section-content {
             background-color: #FFFFFF; /* Branco */
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
             margin-bottom: 2rem;
+            transition: transform 0.3s;
+        }
+
+        .section-content:hover {
+            transform: translateY(-5px);
         }
 
         ul {
-            list-style: disc;
-            margin-left: 2rem;
+            list-style: none;
+            margin-left: 1rem;
             margin-bottom: 1rem;
+        }
+
+        ul li {
+            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        ul li::before {
+            content: "•";
+            color: #A3D9D3; /* Verde-Água */
+            position: absolute;
+            left: 0;
         }
 
         /* Botão WhatsApp */
@@ -136,25 +168,37 @@
             display: inline-block;
             background-color: #A3D9D3; /* Verde-Água */
             color: #FFFFFF;
-            padding: 1rem 2rem;
-            border-radius: 8px;
+            padding: 1.2rem 2.5rem;
+            border-radius: 10px;
             text-decoration: none;
-            font-weight: bold;
-            transition: background-color 0.3s;
-            margin-top: 1rem;
+            font-weight: 700;
+            font-size: 1.2rem;
+            transition: background-color 0.3s, transform 0.3s;
+            margin-top: 1.5rem;
             text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
         }
 
         .whatsapp-btn:hover {
             background-color: #1A73E8; /* Azul Claro */
+            transform: scale(1.05);
         }
 
         /* Footer */
         footer {
-            background-color: #E6F0FA; /* Azul Claro */
+            background: linear-gradient(135deg, #A3D9D3 0%, #E6F0FA 100%); /* Gradiente Inverso */
             text-align: center;
-            padding: 1rem;
-            margin-top: 2rem;
+            padding: 1.5rem;
+            margin-top: 3rem;
+            border-radius: 12px 12px 0 0;
+        }
+
+        footer p {
+            font-size: 1.2rem;
+            font-weight: 500;
         }
 
         @media (max-width: 768px) {
@@ -162,22 +206,29 @@
                 gap: 1rem;
             }
 
+            nav ul li a {
+                font-size: 1rem;
+            }
+
             h1 {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
 
             #hero h1 {
-                font-size: 2.5rem;
+                font-size: 2.8rem;
+            }
+
+            .section-content {
+                padding: 1.5rem;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Navegação com Logo -->
+    <!-- Navegação -->
     <nav>
         <div class="logo">
-            <span class="icon">🧠💙</span>
-            <span class="mente Jovem">Mente</span>
+            <span class="mente">Mente</span>
             <span class="jovem">Jovem</span>
         </div>
         <ul>
@@ -200,7 +251,7 @@
     <!-- Seção Sobre -->
     <section id="sobre">
         <div class="section-content">
-            <h2>Sobre o Projeto Mente Jovem</h2>
+            <h2><span class="icon">❤️</span> Sobre o Projeto Mente Jovem</h2>
             <p>O <strong>Mente Jovem</strong> é uma iniciativa pioneira dedicada a promover o <strong>bem-estar do aluno</strong> através da <strong>terapia virtual</strong> e do desenvolvimento socioemocional de jovens brasileiros. Nosso objetivo principal é garantir que jovens de 14 a 24 anos tenham acesso a suporte psicológico acessível e de qualidade, utilizando plataformas digitais para oferecer apoio emocional, fortalecer a saúde mental e promover habilidades para uma vida equilibrada e produtiva.</p>
             <p>Voltado para comunidades escolares, centros juvenis e populações em vulnerabilidade, o projeto utiliza a <strong>terapia virtual</strong> como ferramenta central para alcançar jovens em qualquer região, assegurando seu bem-estar e desenvolvimento integral.</p>
         </div>
@@ -209,7 +260,7 @@
     <!-- Seção Por que -->
     <section id="porque">
         <div class="section-content">
-            <h2>Por que o Mente Jovem?</h2>
+            <h2><span class="icon">❓</span> Por que o Mente Jovem?</h2>
             <p>Muitos jovens enfrentam desafios como ansiedade, estresse e falta de suporte emocional, frequentemente sem acesso a recursos adequados. O <strong>Mente Jovem</strong> tem como missão transformar essa realidade, com foco em:</p>
             <ul>
                 <li><strong>Bem-Estar do Aluno</strong>: Priorizamos a saúde mental e emocional dos jovens, promovendo resiliência e equilíbrio psicológico.</li>
@@ -224,7 +275,7 @@
     <!-- Seção Como Funciona -->
     <section id="funcionamento">
         <div class="section-content">
-            <h2>Como Funciona?</h2>
+            <h2><span class="icon">⚙️</span> Como Funciona?</h2>
             <p>O <strong>Mente Jovem</strong> estrutura-se em dois pilares centrais, com ênfase na terapia virtual e no bem-estar do aluno:</p>
             <h3>1. Terapia Virtual para Bem-Estar</h3>
             <ul>
@@ -244,7 +295,7 @@
     <!-- Seção Benefícios -->
     <section id="beneficios">
         <div class="section-content">
-            <h2>Benefícios para a Sociedade</h2>
+            <h2><span class="icon">✅</span> Benefícios para a Sociedade</h2>
             <ul>
                 <li><strong>Melhoria do bem-estar dos alunos</strong>, reduzindo ansiedade, depressão e outros desafios emocionais.</li>
                 <li><strong>Acessibilidade universal</strong> por meio da terapia virtual, alcançando jovens em áreas remotas ou urbanas.</li>
@@ -258,7 +309,7 @@
     <!-- Seção Caso Real -->
     <section id="caso">
         <div class="section-content">
-            <h2>Caso Real: O Desafio de Ana</h2>
+            <h2><span class="icon">👤</span> Caso Real: O Desafio de Ana</h2>
             <p>Ana, uma aluna de 16 anos de uma escola pública, sofria de crises de ansiedade que afetavam seu desempenho e interação social. Apesar de buscar ajuda, ela foi negligenciada pelos gestores escolares, que não tinham recursos ou preparo para apoiá-la. Sem suporte, Ana enfrentava risco de evasão escolar e agravamento de sua saúde mental.</p>
             <p>Com o <strong>Mente Jovem</strong>, Ana teria acesso a:</p>
             <ul>
@@ -273,7 +324,7 @@
     <!-- Seção Implementação -->
     <section id="implementacao">
         <div class="section-content">
-            <h2>Implementação</h2>
+            <h2><span class="icon">🗺️</span> Implementação</h2>
             <p>O <strong>Mente Jovem</strong> pode ser implementado em parceria com secretarias de educação, saúde e assistência social, adaptando-se às necessidades regionais. O projeto prevê:</p>
             <ul>
                 <li><strong>Fase Piloto</strong>: Implementação em escolas selecionadas, com terapia virtual e avaliação de impacto em 6 meses.</li>
@@ -286,9 +337,9 @@
     <!-- Seção Contato -->
     <section id="contato">
         <div class="section-content">
-            <h2>Fale Conosco</h2>
+            <h2><span class="icon">📱</span> Fale Conosco</h2>
             <p>O <strong>Mente Jovem</strong> é uma oportunidade de transformar o futuro da juventude brasileira, garantindo o <strong>bem-estar do aluno</strong> por meio da <strong>terapia virtual</strong>. Convidamos o governo a ser nosso parceiro estratégico para levar este projeto a milhares de jovens, construindo uma sociedade mais saudável e preparada.</p>
-            <a href="https://wa.me/5511999128663" class="whatsapp-btn">Fale pelo WhatsApp</a>
+            <a href="https://wa.me/5511999128663" class="whatsapp-btn"><span class="icon">📱</span> Fale pelo WhatsApp</a>
         </div>
     </section>
 
@@ -296,8 +347,5 @@
     <footer>
         <p>Faça parte da mudança. Juntos, podemos priorizar o bem-estar dos jovens!</p>
     </footer>
-
-    <!-- Importação da Fonte Roboto -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </body>
 </html>
